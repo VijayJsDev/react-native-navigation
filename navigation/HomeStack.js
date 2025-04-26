@@ -26,7 +26,7 @@ export default function HomeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="HomeDrawer" component={HomeDrawer} options={{ headerShown: false }} />
-      <Stack.Screen name="ProductDetails" component={ProductDetails} />
+      <Stack.Screen name="ProductDetails" component={ProductDetails} options={{ headerShown: false }}/>
       <Stack.Screen name="OrderCheckoutStack" component={OrderCheckoutStack} options={{ headerShown: false }} />
     </Stack.Navigator>
   );

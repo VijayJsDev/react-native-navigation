@@ -1,10 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-export default function CartList() {
+export default function CartList({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>This is the CartList screen</Text>
+      <Button onPress={() => navigation.navigate('AccountTab', {
+        screen: 'AddAddress',
+      })} title='Go To Add Address' />
+      <Button onPress={() => navigation.navigate('HomeTab', {
+        screen: 'OrderCheckoutStack',
+        params: {
+          screen: 'OrderSummary'
+        }
+      })} title='Go To Order Summary' />
     </View>
   );
 }
